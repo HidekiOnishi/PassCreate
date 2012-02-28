@@ -12,22 +12,22 @@ sub gen_passwd
         my $tab = 0;
         while($count < 46)
         {
-        my $i = 8;
-        my $passwd = "";
-        $pw_orig = "!$%\#()abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
-        $leng = length($pw_orig);
-        while($i){
-                $random = int (rand $leng);
-                $passwd = "$passwd".substr($pw_orig,$random,1);
-                $i--;
-        }
-        print "$passwd\t";
-        $count++;
-        $tab++;
-        if ($tab == 6)
-        {
-                $tab = 0;
-                print "\n";
-        }
+	        my $i = 8;
+        	my $passwd = "";
+        	$pw_orig = "!$%\#()abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+        	$leng = length($pw_orig);
+        	while($i){
+                	$random = int (rand $leng);
+                	$passwd = "$passwd".substr($pw_orig,$random,1);
+                	$i--;
+        	}
+        	print "$passwd\t";
+        	$count++;
+        	$tab++;
+        	if ($tab == 6)
+        	{
+                	$tab = 0;
+                	print "\n";
+        	}
         }
 }
